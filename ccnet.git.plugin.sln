@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ccnet.git.plugin", "ccnet.git.plugin\ccnet.git.plugin.csproj", "{369BAB51-AE2B-457E-A97E-4120EF2151B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ccnet.git.plugin.tests", "ccnet.git.plugin.tests\ccnet.git.plugin.tests.csproj", "{2074E2A8-6E6E-48F3-B7AD-94F3901DF024}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DB2954F5-4586-4F92-BD60-58D04BA707C8}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README = README
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{369BAB51-AE2B-457E-A97E-4120EF2151B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{369BAB51-AE2B-457E-A97E-4120EF2151B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{369BAB51-AE2B-457E-A97E-4120EF2151B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{369BAB51-AE2B-457E-A97E-4120EF2151B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2074E2A8-6E6E-48F3-B7AD-94F3901DF024}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2074E2A8-6E6E-48F3-B7AD-94F3901DF024}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2074E2A8-6E6E-48F3-B7AD-94F3901DF024}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2074E2A8-6E6E-48F3-B7AD-94F3901DF024}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
