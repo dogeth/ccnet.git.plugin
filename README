@@ -28,6 +28,6 @@ I took a lot of ideas from the following
 A couple of things you should know...
   I'm not checking for multiple heads, like the mercurial source control class.  Didn't see that situation arising in our current git workflow so I didn't bother.
   The position of each modification in the list is used as the ChangeNumber.
-  The type of modication is used to store the commit hash
+  The type of modification is used to store the commit hash
   Commit level modifications are used.  Actual files changed in each commit are not published.  Obviously something which could be implemented but have run out of time for the moment.
 
