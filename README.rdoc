@@ -25,8 +25,8 @@ Source Control Plugin for CruiseControl.NET that talks to git.
 
 ==Environment
 Before even attempting to use this plugin, take note of the following
-* Your path should include *%ProgramFiles%\Git\bin* and *%ProgramFiles%\Git\cmd*
-* The *HOME* environment variable should be set to *%USERPROFILE%*
+* Your path should include %ProgramFiles%\Git\bin and %ProgramFiles%\Git\cmd
+* The HOME environment variable should be set to %USERPROFILE%
 * You should be able to run git from a standard command prompt.  
 
 ==Things to do
