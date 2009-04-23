@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ccnet.git.plugin.tests", "c
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DB2954F5-4586-4F92-BD60-58D04BA707C8}"
 	ProjectSection(SolutionItems) = preProject
-		README = README
+		README.rdoc = README.rdoc
 	EndProjectSection
 EndProject
 Global

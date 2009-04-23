@@ -1,0 +1,45 @@
+=ccnet.git.plugin
+
+Source Control Plugin for CruiseControl.NET that talks to git.
+
+==configuration
+
+===minimal ccnet configuration
+
+  <sourcecontrol type="git">
+        <repository>git@github.com:dogeth/ccnet.git.plugin.git</repository>
+  </sourcecontrol>
+
+===fully specified ccnet configuration
+
+  <sourcecontrol type="git">
+        <repository>git@github.com:dogeth/ccnet.git.plugin.git</repository>
+        <branch>master</branch>
+        <autoGetSource>true</autoGetSource>
+        <executable>git</executable>
+        <tagOnSuccess>false</tagOnSuccess>
+        <tagCommitMessage>ccnet build {0}</tagCommitMessage>
+        <workingDirectory>c:\build\ccnet.git.plugin</workingDirectory>
+        <timeout>60000</timeout>
+  </sourcecontrol>
+
+==Environment
+Before even attempting to use this plugin, take note of the following
+*Your path should include C:\Program Files\Git\bin and C:\Program Files\Git\cmd
+*The HOME environment variable should be set to %USERPROFILE%
+*You should be able to run git from a standard command prompt.  
+
+==Things to do
+
+*I'm not checking for multiple heads, like the mercurial source control class.  Didn't see that situation arising in our current git workflow so I didn't bother.
+*The position of each modification in the list is used as the ChangeNumber.  WHen 1.5 comes around may be able to use the commit hash instead.
+*The type of modification is used to store the commit hash.  Should expand this to actual file information.
+*Commit level modifications are used.  Actual files changed in each commit are not published.  Obviously something which could be implemented but have run out of time for the moment.
+  
+==Credits
+I took a lot of ideas from the following
+* http://jira.public.thoughtworks.org/browse/CCNET-1188
+* http://www.codeplex.com/TFSCCNetPlugin/
+* ccnet source
+
+I also got some great feedback from Xerxes Battiwalla, see his blog post on the matter. http://www.xerxesb.com/2009/getting-cruisecontrolnet-to-talk-to-git/ 
