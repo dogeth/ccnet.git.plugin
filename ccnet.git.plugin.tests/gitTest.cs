@@ -22,7 +22,7 @@ namespace ccnet.git.plugin.tests
         const string GIT_FETCH = "fetch";
         const string GIT_REMOTE_HASH = "log origin/master --date-order -1 --pretty=format:'%H'";
         const string GIT_LOCAL_HASH = "log --date-order -1 --pretty=format:'%H'";
-        const string GIT_REMOTE_COMMITS = @"log origin/master --date-order --reverse --pretty=format:""<Modification><Type>Commit %H</Type><ModifiedTime>%ci</ModifiedTime><UserName>%cN</UserName><EmailAddress>%ce</EmailAddress><Comment>%s</Comment></Modification>""";
+        const string GIT_REMOTE_COMMITS = @"log origin/master --date-order --reverse --pretty=format:""<Modification><Type>Commit %H</Type><ModifiedTime>%ci</ModifiedTime><UserName>%cN</UserName><EmailAddress>%ce</EmailAddress><Comment><![CDATA[%s]]></Comment></Modification>""";
         const string GIT_CONFIG1 = @"config remote.origin.url xyz.git";
         const string GIT_CONFIG2 = "config remote.origin.fetch +refs/heads/*:refs/remotes/origin/*";
         const string GIT_CONFIG3 = "config branch.master.remote origin";
@@ -266,6 +266,5 @@ namespace ccnet.git.plugin.tests
             git.Repository = @"xyz.git";
             git.WorkingDirectory = DefaultWorkingDirectory;
         }
-
     }
 }

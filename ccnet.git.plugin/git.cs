@@ -17,7 +17,7 @@ namespace ThoughtWorks.CruiseControl.Core.Sourcecontrol
     [ReflectorType("git")]
     public class git : ProcessSourceControl
     {
-        public const string HistoryFormat = @"""<Modification><Type>Commit %H</Type><ModifiedTime>%ci</ModifiedTime><UserName>%cN</UserName><EmailAddress>%ce</EmailAddress><Comment>%s</Comment></Modification>""";
+        public const string HistoryFormat = @"""<Modification><Type>Commit %H</Type><ModifiedTime>%ci</ModifiedTime><UserName>%cN</UserName><EmailAddress>%ce</EmailAddress><Comment><![CDATA[%s]]></Comment></Modification>""";
 
         private readonly IFileSystem _fileSystem;
 

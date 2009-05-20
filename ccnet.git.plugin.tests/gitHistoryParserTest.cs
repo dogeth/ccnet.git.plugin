@@ -44,6 +44,13 @@ namespace ccnet.git.plugin.tests
             <Comment>Commit Message 4</Comment>
         </Modification>";
 
+        string oneEntryLogWithCDataCommentXml = @"<Modification>
+            <ModifiedTime>2009-01-01T10:00:00+10:00</ModifiedTime>
+            <UserName>Fred</UserName>
+            <EmailAddress>abc@abc.com</EmailAddress>
+            <Comment><![CDATA[Commit Message 1]]></Comment>
+        </Modification>";
+
         private readonly gitHistoryParser git = new gitHistoryParser();
 
         [Test]
@@ -76,6 +83,14 @@ namespace ccnet.git.plugin.tests
         public void HandleInvalidXml()
         {
             git.Parse(new StringReader("><"), DateTime.Now, DateTime.Now);
+        }
+
+        [Test]
+        public void ParsingSingleLogMessageWithCDataCommentProducesCorrectComment()
+        {
+            Modification[] modifications = git.Parse(new StringReader(oneEntryLogWithCDataCommentXml), new DateTime(2009, 01, 01, 10, 00, 00), DateTime.Now);
+
+            Assert.AreEqual("Commit Message 1", modifications[0].Comment);
         }
     }
 }
